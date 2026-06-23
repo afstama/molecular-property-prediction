@@ -29,7 +29,11 @@ This project explores how combining different molecular representations affects 
 
 ## Key Results
 
-Combined representations achieve R² of **0.93–0.94**, an improvement of **8–15%** over the best individual representation. A stacking ensemble over per-representation models consistently outperforms direct concatenation.
+Combining molecular representations consistently improves test set performance over any individual representation type across all three models. On the dopamine dataset (120 test molecules), the best test R² is **0.46** (SVM + combined representations). The stacking ensemble and direct concatenation perform comparably — neither consistently wins at this dataset size.
+
+The dopamine dataset is small enough that all models overfit substantially, so the results there are indicative rather than conclusive. The lipophilicity notebook (418 test molecules, scaffold split) gives a more reliable picture: combined representations reach test R² up to **0.79** (SVM), with molecular descriptors showing strong individual performance across models.
+
+The clearest takeaway is that fusing representations helps — but understanding *why*, and how much each modality contributes, is an open question that motivates further work.
 
 ## Stack
 
