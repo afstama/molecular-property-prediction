@@ -1,6 +1,6 @@
 # Molecular Property Prediction
 
-Master's thesis project — **"Prediction of molecular properties through the combination of NLP features, molecular descriptors, and fingerprints"** (University of Zagreb, Faculty of Electrical Engineering and Computing).
+Master's thesis project: **"Prediction of molecular properties through the combination of NLP features, molecular descriptors, and fingerprints"** (Faculty of Electrical Engineering and Computing, University of Zagreb).
 
 Awarded the **GDi Excellence Award** and presented at the **10th Symposium of Chemistry Students**.
 
@@ -8,7 +8,7 @@ Awarded the **GDi Excellence Award** and presented at the **10th Symposium of Ch
 
 ## Overview
 
-This project explores how combining different molecular representations affects the quality of molecular property prediction. The core idea is that fusing descriptors derived from different modalities — physicochemical descriptors, topological fingerprints, and NLP-based latent embeddings — into a joint representation improves prediction performance compared to any single representation alone.
+This project explores how combining different molecular representations affects the quality of molecular property prediction. The core idea is that fusing descriptors derived from different modalities (in this case physicochemical descriptors, topological fingerprints, and NLP-based latent embeddings) into a joint representation improves prediction performance compared to any single representation alone.
 
 ## Notebooks
 
@@ -29,11 +29,11 @@ This project explores how combining different molecular representations affects 
 
 ## Key Results
 
-Combining molecular representations consistently improves test set performance over any individual representation type across all three models. On the dopamine dataset (120 test molecules), the best test R² is **0.46** (SVM + combined representations). The stacking ensemble and direct concatenation perform comparably — neither consistently wins at this dataset size.
+Combining molecular representations consistently improves test set performance over any individual representation type across all three models. On the dopamine dataset (120 test molecules), the best test R² is **0.46** (SVM + combined representations). The stacking ensemble and direct concatenation perform comparably. Neither consistently wins at this dataset size.
 
 The dopamine dataset is small enough that all models overfit substantially, so the results there are indicative rather than conclusive. The lipophilicity notebook (418 test molecules, scaffold split) gives a more reliable picture: combined representations reach test R² up to **0.79** (SVM), with molecular descriptors showing strong individual performance across models.
 
-The clearest takeaway is that fusing representations helps — but understanding *why*, and how much each modality contributes, is an open question that motivates further work.
+The clearest takeaway is that fusing representations helps, but understanding *why*, and how much each modality contributes, is an open question that motivates further work.
 
 ## Stack
 
